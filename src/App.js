@@ -1,23 +1,46 @@
-import logo from './logo.svg';
+import React from "react";
+import Button from "./components/Button.js";
+import logo from './assets/logo.png';
+import { LogOut } from "lucide-react";
+import { motion } from "framer-motion";
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+  return(
+    <div className="container">
+      {/* Sign Out Button */}
+      <div className="sign-out">
+        <Button variant="outline" className="sign-out-button">
+          <LogOut className="icon" /> Sign Out
+        </Button>
+      </div>
+
+          {/* Title and Logo */}
+      <div className="title-logo-container">
+        <div className="title">Signwave</div>
+        <div className="logo-slot">
+          <img src={logo} alt="Logo" className="logo-image" />
+        </div>
+      </div>
+      
+      {/* Main Buttons */}
+      <div className="button-container">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="translate-button"
         >
-          Learn React
-        </a>
-      </header>
+          Translate
+        </motion.button>
+
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="practice-button"
+        >
+          Practice
+        </motion.button>
+      </div>
     </div>
   );
 }

@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+/* General container styling */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: linear-gradient(to bottom, #3e8fc2, #192525);
   color: white;
+  padding: 16px;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+/* Title and Logo Container */
+.title-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Title text styling */
+.title {
+  font-size: 64px;
+  color: white;
+  font-family: 'Share Tech', sans-serif;
+}
+
+/* Logo image slot styling */
+.logo-slot {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Let the height adjust based on aspect ratio */
+}
+
+.logo-image {
+  width: 100%; /* Fill the logo slot width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Make sure the logo fits properly */
+}
+
+/* Sign out button styling */
+.sign-out {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  
+}
+
+.sign-out-button {
+  color: rgb(53, 48, 48);
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+/* Main button container */
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/* Translate button styling */
+.translate-button {
+  width: 256px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #5DADE2;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.translate-button:hover {
+  background-color: #3498DB;
+}
+
+/* Practice button styling */
+.practice-button {
+  width: 256px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #5DADE2;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.practice-button:hover {
+  background-color: #3498DB;
 }
