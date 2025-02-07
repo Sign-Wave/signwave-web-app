@@ -111,6 +111,21 @@ html, body {
     background: #3498DB;
 }
 
+/* Enable scrolling for small desktops (height ≤ 800px) */
+@media (max-height: 800px) and (min-width: 769px) {
+    html, body {
+        overflow: visible !important; /* Ensure scrolling works */
+        overflow-y: auto; /* Allow vertical scrolling */
+        height: auto;
+    }
+
+    .landing-container {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+    }
+}
+
 @media (max-width: 768px) {
     html, body {
         overflow: visible !important; /* Ensure scrolling works */
