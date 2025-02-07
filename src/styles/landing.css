@@ -43,10 +43,10 @@ html, body {
 .landing-container .content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 80vh;
-    padding: 60px;
+    flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
+    height: auto; /* Remove fixed height */
+    min-height: 80vh;
+    padding: 5vw; /* Use relative padding */
 }
 
 /* Left Section (Text & Buttons) */
@@ -55,12 +55,12 @@ html, body {
 }
 
 .landing-container .slogan {
-    font-size: 7rem;
+    font-size: clamp(3rem, 7vw, 7rem); /* Dynamically scale based on viewport */
+    margin-bottom: 10vh; /* Use relative units */
     font-weight: bold;
     color: white;
     font-family: 'Share Tech', sans-serif;
     align-self: flex-start;
-    margin-bottom: 100px;
 }
 
 .landing-container .description {
@@ -73,14 +73,16 @@ html, body {
 
 /* Right Section (Product Image) */
 .landing-container .right-section {
-    width: 40%;
+    width: 100%;
+    max-width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10vh;
 }
 
 .landing-container .product-image {
-    width: 80%;
+    width: 100%;
     max-width: 500px;
 }
 
@@ -107,4 +109,40 @@ html, body {
 
 .landing-container .login-button:hover {
     background: #3498DB;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow: visible !important; /* Ensure scrolling works */
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .landing-container {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        display: block !important; /* Ensure stacking */
+    }
+
+    .landing-container .content {
+        height: auto !important;
+        max-height: unset !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20vh;
+    }
+
+    .landing-container .left-section {
+        width: 90%;
+    }
+
+    .landing-container .right-section {
+        width: 90%;
+    }
+
+    .landing-container .slogan {
+        font-size: 5rem;
+    }
 }
