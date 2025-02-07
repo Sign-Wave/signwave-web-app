@@ -1,0 +1,120 @@
+/* General container styling */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.home-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #3e8fc2, #192424);
+  box-sizing: border-box;
+}
+
+/* Top Bar */
+.home-container .top-bar {
+  background: #2a6c8d; /* Contrasting dark color */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+/* Logo Section */
+.home-container .logo-section {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: 'Share Tech', sans-serif;
+}
+
+.home-container .logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Sign Out Button */
+.home-container .sign-out {
+  position: relative;
+}
+
+.home-container .sign-out-button {
+  color: white;
+  background: #3e8fc2;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.home-container .sign-out-button:hover {
+  background: #3498DB;
+}
+
+/* Main Content */
+.home-container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  padding-top: 60px; /* Adjusted for the fixed top bar */
+}
+
+/* Welcome Message */
+.home-container .welcome {
+  font-size: 128px;
+  color: white;
+  font-family: 'Share Tech', sans-serif;
+  margin-bottom: 40px;
+}
+
+/* Main button container */
+.home-container .button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 64px;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+/* Translate button styling */
+.home-container .translate-button {
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 20px 60px;
+  width: 400px;
+  transition: background 0.3s ease-in-out;
+}
+
+.home-container .translate-button:hover {
+  background-color: #3498DB;
+}
+
+/* Practice button styling */
+.home-container .practice-button {
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 20px 60px;
+  width: 400px;
+  transition: background 0.3s ease-in-out;
+}
+
+.home-container .practice-button:hover {
+  background-color: #3498DB;
+}

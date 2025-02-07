@@ -1,0 +1,110 @@
+/* General Styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Landing Page Container */
+.landing-container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #3e8fc2, #192424);
+}
+
+/* Top Bar */
+.landing-container .top-bar {
+    background: #2a6c8d; /* Contrasting dark color */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+/* Logo Section */
+.landing-container .logo-section {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+}
+
+.landing-container .logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Main Content */
+.landing-container .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    padding: 60px;
+}
+
+/* Left Section (Text & Buttons) */
+.landing-container .left-section {
+    width: 53%;
+}
+
+.landing-container .slogan {
+    font-size: 7rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+    align-self: flex-start;
+    margin-bottom: 100px;
+}
+
+.landing-container .description {
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+    margin-bottom: 200px;
+    max-width: 80%;
+}
+
+/* Right Section (Product Image) */
+.landing-container .right-section {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-container .product-image {
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Login Buttons */
+.landing-container .login-button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.landing-container .login-button.small {
+    background: #3e8fc2;
+    padding: 8px 16px;
+}
+
+.landing-container .login-button.large {
+    background: #3e8fc2;
+    padding: 16px 32px;
+}
+
+.landing-container .login-button:hover {
+    background: #3498DB;
+}

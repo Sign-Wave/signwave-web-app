@@ -1,47 +1,23 @@
 import React from "react";
-import Button from "./components/Button.js";
-import logo from './assets/logo.png';
-import { LogOut } from "lucide-react";
-import { motion } from "framer-motion";
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Landing from "./pages/landing.js";
+import Login from "./pages/login.js";
+import Home from "./pages/home.js";
+import Translate from "./pages/translate.js";
+import Practice from "./pages/practice.js";
+import "./App.css";
 
 function App() {
-  return(
-    <div className="container">
-      {/* Sign Out Button */}
-      <div className="sign-out">
-        <Button variant="outline" className="sign-out-button">
-          <LogOut className="icon" /> Sign Out
-        </Button>
-      </div>
-
-          {/* Title and Logo */}
-      <div className="title-logo-container">
-        <div className="title">Signwave</div>
-        <div className="logo-slot">
-          <img src={logo} alt="Logo" className="logo-image" />
-        </div>
-      </div>
-      
-      {/* Main Buttons */}
-      <div className="button-container">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="translate-button"
-        >
-          Translate
-        </motion.button>
-
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="practice-button"
-        >
-          Practice
-        </motion.button>
-      </div>
-    </div>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/translate" element={<Translate />} />
+        <Route path="/practice" element={<Practice />} />
+      </Routes>
+    </Router>
   );
 }
 
