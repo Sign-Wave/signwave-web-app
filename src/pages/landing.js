@@ -15,7 +15,10 @@ const Landing = () => {
           <img src={logo} alt="Signwave Logo" className="logo" />
           <h2>Signwave</h2>
         </div>
-        <button className="login-button small" onClick={() => navigate("/login")}>
+        <button
+          className="login-button small"
+          onClick={() => navigate("/login")}
+        >
           Login
         </button>
       </div>
@@ -25,16 +28,23 @@ const Landing = () => {
         <div className="left-section">
           <h1 className="slogan">Breaking Barriers with Signwave</h1>
           <p className="description">
-            Experience the future of communication with our ASL translating glove. 
-            Seamlessly convert hand gestures into spoken language, bridging the gap 
-            between the deaf and hearing communities.
+            Experience the future of communication with our ASL translating
+            glove. Seamlessly convert hand gestures into spoken language,
+            bridging the gap between the deaf and hearing communities.
           </p>
-          <button className="login-button large" onClick={() => navigate("/login")}>
+          <button
+            className="login-button large"
+            onClick={() => navigate("/login")}
+          >
             Get Started
           </button>
         </div>
         <div className="right-section">
-          <img src={productImage} alt="Signwave Glove" className="product-image" />
+          <img
+            src={productImage}
+            alt="Signwave Glove"
+            className="product-image"
+          />
         </div>
       </div>
     </div>
