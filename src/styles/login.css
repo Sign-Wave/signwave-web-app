@@ -1,0 +1,146 @@
+/* General Styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Login Page Container */
+.login-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #3e8fc2, #192424);
+  box-sizing: border-box;
+}
+
+/* Top Bar */
+.login-container .top-bar {
+    background: #2a6c8d; /* Contrasting dark color */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Logo Section */
+  .login-container .logo-section {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+  }
+  
+  .login-container .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+/* Login Box */
+.login-container .login-box {
+    background: rgb(63, 205, 230);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 15vw;
+    margin:auto;
+    font-family: 'Share Tech', sans-serif;
+}
+
+.login-container .login-box h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.login-container .login-box p {
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.login-container .login-box label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.login-container .login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Buttons */
+.login-container .button-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-container .login-button, .signup-button {
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+.login-container .login-button {
+    background: #3e8fc2;
+    color: white;
+    
+}
+
+.login-container .signup-button {
+    background: #3e8fc2;
+    color: white;
+}
+
+.login-container .login-button:hover {
+    background: #3498DB;
+}
+
+.login-container .signup-button:hover {
+    background: #3498DB;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow: visible !important;
+        overflow-y: auto;
+        height: auto;
+    }
+  
+    .login-container {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+  
+    .login-container .content {
+        height: auto !important;
+        max-height: unset !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 20vh;
+    }
+  }

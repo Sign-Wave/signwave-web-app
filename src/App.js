@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import firebase from "./firebase.js";
 import Landing from "./pages/landing.js";
 import Login from "./pages/login.js";
 import Home from "./pages/home.js";
