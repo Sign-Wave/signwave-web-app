@@ -4,10 +4,12 @@ import Button from "../components/Button.js";
 import logo from "../assets/logo.png";
 import { LogOut } from "lucide-react";
 import { motion } from "framer-motion";
+import { useAuth } from "../contexts/AuthContext.js"; // Import useAuth
 import "../styles/home.css";
 
 function Home() {
   const navigate = useNavigate();
+  const { user } = useAuth(); // Get user from context
 
   return (
     <div className="home-container">
@@ -24,7 +26,7 @@ function Home() {
 
       {/* Main Content */}
       <div className="content">
-        <h1 className="welcome">Welcome, </h1>
+        <h1 className="welcome">Welcome, {user ? user : "Guest"}!</h1>
         <div className="button-container">
           <motion.button
             whileHover={{ scale: 1.1 }}

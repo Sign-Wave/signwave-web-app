@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useAuth } from "../contexts/AuthContext.js"; // Import useAuth
 import "../styles/login.css";
 
 const Login = () => {
   const navigate = useNavigate();
   const auth = getAuth();
+  const { setUser } = useAuth(); // Get setUser from context
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,19 +16,19 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/home"); // Redirect to home page on successful login
+      setUser(email); // Store email in context
+      navigate("/home");
     } catch (error) {
       alert("Login failed: " + error.message);
     }
   };
 
   const handleSignup = () => {
-    navigate("/signup"); // Redirect to signup page
+    navigate("/signup");
   };
 
   return (
     <div className="login-container">
-
       <div className="top-bar">
         <div className="logo-section">
           <img src={logo} alt="Signwave Logo" className="logo" />

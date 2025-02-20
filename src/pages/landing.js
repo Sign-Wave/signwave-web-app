@@ -29,7 +29,7 @@ const Landing = () => {
             Seamlessly convert hand gestures into spoken language, bridging the gap 
             between the deaf and hearing communities.
           </p>
-          <button className="login-button large" onClick={() => navigate("/login")}>
+          <button className="login-button large" onClick={() => navigate("/signup")}>
             Get Started
           </button>
         </div>
