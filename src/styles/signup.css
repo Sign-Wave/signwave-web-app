@@ -5,19 +5,18 @@ html, body {
     padding: 0;
     overflow: hidden;
 }
-
-/* Login Page Container */
-.login-container {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom, #3e8fc2, #192424);
-  box-sizing: border-box;
-}
-
-/* Top Bar */
-.login-container .top-bar {
+/* signup.css */
+.signup-container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #3e8fc2, #192424);
+    box-sizing: border-box;
+  }
+  
+  /* Top Bar */
+.signup-container .top-bar {
     background: #2a6c8d; /* Contrasting dark color */
     height: 80px;
     display: flex;
@@ -25,22 +24,9 @@ html, body {
     justify-content: space-between;
     padding: 0 40px;
   }
-  
-  /* Logo Section */
-  .login-container .logo-section {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-family: 'Share Tech', sans-serif;
-  }
-  
-  .login-container .logo {
-    height: 50px;
-    margin-right: 10px;
-  }
 
 /* Home Button */
-.login-container .top-bar .home-button {
+.signup-container .top-bar .home-button {
     border: none;
     color: white;
     cursor: pointer;
@@ -50,17 +36,30 @@ html, body {
     transition: background 0.3s ease-in-out;
 }
 
-.login-container .top-bar .home-button.small {
+.signup-container .top-bar .home-button.small {
     background: #3e8fc2;
     padding: 8px 16px;
 }
 
-.login-container .top-bar .home-button:hover {
+.signup-container .top-bar .home-button:hover {
     background: #3498DB;
 }
-
-/* Login Box */
-.login-container .login-box {
+  
+  /* Logo Section */
+  .signup-container .logo-section {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+  }
+  
+  .signup-container .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  /* Sign-Up Box */
+  .signup-container .signup-box {
     background: rgb(63, 205, 230);
     padding: 40px;
     border-radius: 12px;
@@ -70,28 +69,27 @@ html, body {
     align-items: center;
     text-align: center;
     width: 15vw;
-    margin:auto;
+    margin: auto;
     font-family: 'Share Tech', sans-serif;
 }
 
-.login-container .login-box h1 {
-    margin-bottom: 10px;
-    font-size: 2rem;
+/* Reduce space between first and second line inside signup box */
+.signup-container .signup-box h1 {
+    margin-bottom: 5px;
+}
+.signup-container .signup-box p {
+    margin-bottom: 15px;
 }
 
-.login-container .login-box p {
-    margin-bottom: 20px;
-}
-
-/* Input Fields */
-.login-container .login-box label {
+/* Left-align labels inside centered box */
+.signup-container .signup-box label {
     align-self: flex-start;
     margin-bottom: 5px;
     font-size: 1rem;
     color: #333;
 }
 
-.login-container .login-box input {
+.signup-container .signup-box input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -100,44 +98,34 @@ html, body {
     font-size: 1rem;
 }
 
-/* Buttons */
-.login-container .button-container {
+/* Buttons side by side */
+.signup-container .button-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
 }
 
-.login-container .login-button, .signup-button {
+.signup-container .signup-button,
+.signup-container .login-button {
     border: none;
     padding: 12px;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
     transition: background 0.3s ease-in-out;
-    width: 100%;
-}
-
-.login-container .login-button {
-    background: #3e8fc2;
-    color: white;
-    
-}
-
-.login-container .signup-button {
+    width: 48%; /* Adjusted width for buttons */
     background: #3e8fc2;
     color: white;
 }
 
-.login-container .login-button:hover {
-    background: #3498DB;
+.signup-container .signup-button:hover,
+.signup-container .login-button:hover {
+    background: #3498db;
 }
 
-.login-container .signup-button:hover {
-    background: #3498DB;
-}
-
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     html, body {
         overflow: visible !important;
         overflow-y: auto;

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useAuth } from "../contexts/AuthContext.js"; // Import useAuth
+import { auth } from "../firebase.js"; // Import auth from your firebase config file
 import "../styles/login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-  const auth = getAuth();
   const { setUser } = useAuth(); // Get setUser from context
 
   const [email, setEmail] = useState("");
@@ -15,8 +15,11 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      setUser(email); // Store email in context
+       const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Retrieve the first name from Firebase Auth and set it in context
+      setUser(user.displayName);
       navigate("/home");
     } catch (error) {
       alert("Login failed: " + error.message);
@@ -34,6 +37,9 @@ const Login = () => {
           <img src={logo} alt="Signwave Logo" className="logo" />
           <h2>Signwave</h2>
         </div>
+        <button className="home-button small" onClick={() => navigate("/")}>
+          Home
+        </button>
       </div>
 
       <div className="login-box">
